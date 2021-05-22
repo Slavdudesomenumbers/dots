@@ -1,0 +1,39 @@
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
+# auto complete
+setopt COMPLETE_ALIASES
+zstyle ':completion::complete:*' gain-privileges 1
+
+## alias ##
+alias n='nano'
+alias s='sudo'
+alias h='cd ~'
+alias e='exit'
+alias reboot='sudo systemctl reboot'
+alias shutdown='sudo systemctl shutdown'
+alias suspend='sudo systemctl suspend'
+alias up='paru -Syu'
+alias cat='bat'
+alias ..='cd ..'
+alias ...='cd ...'
+alias ls='lsd'
+alias cp='rsync -P -r'
+alias vpn='sudo protonvpn connect'
+alias p2p='sudo protonvpn connect --p2p'
+alias arrr='sudo protonvpn connect --p2p && sudo systemctl start jackett.service && qbittorrent'
+alias stopit='killall qbittorrent && sudo systemctl stop jackett.service && sudo protonvpn disconnect'
+alias dis='sudo protonvpn disconnect'
+alias rm='rm -rf'
+alias top='htop'
+alias c='clear'
+alias myip='curl https://icanhazip.com/'
+alias pacman='sudo pacman'
+alias yt-audio='youtube-dl -x --audio-format=opus'
+alias yt='youtube-dl'
+alias w2x='waifu2x-ncnn-vulkan'
+alias autoremove="sudo pacman -Rcns $(pacman -Qdtq)"
+alias yay='paru'
+alias x='7z x'
+alias down='cd ~/Scratch/hat'
